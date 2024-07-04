@@ -1,4 +1,7 @@
-# Vue blog
+---
+layout: default
+title: Vue Blog
+---
 
 ### In vue options are
 - data
@@ -128,7 +131,6 @@ can pass data in two different way
             
             app.mount('body')
           ```
-
 ### understanding data flow
 creating new app component for navbar
 ```vue
