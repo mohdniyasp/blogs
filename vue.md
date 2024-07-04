@@ -1,7 +1,4 @@
----
-layout: default
-title: Vue Blog
----
+# Vue Blog
 
 ### In vue options are
 - data
@@ -10,10 +7,8 @@ title: Vue Blog
 - template
 - props
 
-a component is a mini application inside a larger application
-
-creating component for content (in <script></script>)
-
+a component is a mini application inside a larger application  
+creating component for content (in <script></script>)  
 ```vue
 let app = vue.createApp({});
 
@@ -28,14 +23,13 @@ app.component('page-viewer', {
 
 app.mount('body')
 ```
-use vue component inside `<body></body>` as an html element
+use vue component inside `<body></body>` as an html element  
 ```vue
 <page-viewer></page-viewer>
 ```
-
 need to pass data into `<page-viewer></page-viewer>`  
 componet has props that we pass data to  
-can pass data in two different way
+can pass data in two different way  
 1. as normal html attribute  
     create a prop called page-title and page-content
     ```vue
@@ -60,16 +54,15 @@ can pass data in two different way
       
       app.mount('body')
     ```
-
 2. using v-bind directive with props (shorthand - :)  
-     - to use string as value use string delemeter (' ')
+     - to use string as value use string delemeter (' ')  
         ```vue
           <page-viewer
             :page-title="'Page Title'"
             :page-content="'Page Content'"
           ></page-viewer>
         ```
-        not enoughf to supply values, have to define inside component (props) (camel-case)
+        not enoughf to supply values, have to define inside component (props) (camel-case)  
         ```vue
           let app = vue.createApp({});
           
@@ -85,15 +78,14 @@ can pass data in two different way
           
           app.mount('body')
         ```
-
-     - to be dynamic
+     - to be dynamic  
         ```vue
           <page-viewer
             :page-title="pages[activePage].pageTitle"
             :page-content="pages[activePage].content"
           ></page-viewer>
         ```
-        not enoughf to supply values, have to define inside component (props) (camel-case)
+        not enoughf to supply values, have to define inside component (props) (camel-case)  
         ```vue
           let app = vue.createApp({});
           
@@ -109,13 +101,13 @@ can pass data in two different way
           
           app.mount('body')
         ```
-        - better, one prop, :page
+        - better, one prop, :page  
           ```vue
             <page-viewer
               :page="pages[activePage]"
             ></page-viewer>
           ```
-          not enoughf to supply values, have to define inside component (props) (camel-case)
+          not enoughf to supply values, have to define inside component (props) (camel-case)  
           ```vue
             let app = vue.createApp({});
             
@@ -132,7 +124,7 @@ can pass data in two different way
             app.mount('body')
           ```
 ### understanding data flow
-creating new app component for navbar
+creating new app component for navbar  
 ```vue
 app.component('navbar', {
   props: ['pages', 'activePage', 'navLinkClick'],
@@ -182,7 +174,7 @@ app.component('navbar', {
   }
 });
 ```
-use navbar component as html element
+use navbar component as html element  
 ```vue
   <navbar
     :pages="pages"
@@ -190,7 +182,15 @@ use navbar component as html element
     :nav-link-click="(index) => activePage = index"
   ></navbar>
 ```
-
 ###### changes
 1. escape js template string using '\' (backslash)
-2. this is just a test paragraph
+2. adding props, props: ['pages', 'activePage']
+3. adding navbar attribute which is inside body see next point
+4. binding data to props, :pages="pages" :active-page="activePage"
+5. move theme method
+6. move theme data() {}
+7. data flows from parent to child
+8. how can child notify parent changes - we use event
+9. add :nav-link-click="(index) => activePage = index"
+10. add prop ['navLinkClick']
+11. props are read only, @click.prevent="navLinkClick(index)"
