@@ -191,4 +191,4 @@ use navbar component as html element
 
 ###### changes
 1. escape js template string using '\' (backslash)
-2. 
+2. this is just a test paragraph
