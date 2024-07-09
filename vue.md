@@ -190,7 +190,15 @@ use navbar component as html element
 5. move theme method
 6. move theme data() {}
 7. data flows from parent to child
-8. how can child notify parent changes - we use event
-9. add :nav-link-click="(index) => activePage = index"
-10. add prop ['navLinkClick']
-11. props are read only, @click.prevent="navLinkClick(index)"
+9. how can child notify parent changes - we use event
+10. add :nav-link-click="(index) => activePage = index"
+11. add prop ['navLinkClick']
+12. props are read only, @click.prevent="navLinkClick(index)"
+
+
+v-bind -> ':'
+v-on -> '@'
+v-model
+v-if
+v-else
+v-for
