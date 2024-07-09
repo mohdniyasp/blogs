@@ -196,9 +196,10 @@ use navbar component as html element
 12. props are read only, @click.prevent="navLinkClick(index)"
 
 
-v-bind -> ':'
-v-on -> '@'
-v-model
-v-if
-v-else
-v-for
+v-bind -> ':'  
+v-on -> '@'  
+v-model  
+v-if  
+v-else  
+v-for  
+computed() ->  
