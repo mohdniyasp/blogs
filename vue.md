@@ -203,3 +203,5 @@ v-if
 v-else  
 v-for  
 computed() ->  
+onMounted()  
+watch() async await
