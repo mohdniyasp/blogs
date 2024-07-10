@@ -204,4 +204,8 @@ v-else
 v-for  
 computed() ->  
 onMounted()  
-watch() async await
+watch() async await  
+components  
+props  
+emits  
+
