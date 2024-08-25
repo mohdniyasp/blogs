@@ -5,3 +5,5 @@
 [python notes](python.md)  
 
 [vue envato tuts](vue.md)  
+
+[makeElectronicsCharlesPlatt](makeElectronicsCharlesPlatt.md)
